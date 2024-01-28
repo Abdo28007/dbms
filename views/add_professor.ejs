@@ -1,0 +1,53 @@
+<!-- add_student.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add_professor.css">
+
+    <title>Add New Professor</title>
+    <!-- Add your CSS stylesheets here -->
+</head>
+<body>
+    <div class="brand-name">
+        <a href="/home">
+        <h1>University Dz</h1>
+    </a>
+    </div>
+    <h1>Add New professor</h1>
+    <form action="/home/professors/create" method="POST">
+        <div>
+            <label for="student_name">Name:</label>
+            <input type="text" id="student_name" name="name" required>
+        </div>
+        <div>
+            <label for="student_email">Email:</label>
+            <input type="email" id="student_email" name="email" required>
+        </div>
+        <div>
+            <label for="student_address">Address:</label>
+            <input type="text" id="student_address" name="adress" required>
+        </div>
+        <div>
+            <label for="student_wilaya">Wilaya:</label>
+            <input type="text" id="student_wilaya" name="wilaya" required>
+        </div>
+        <div>
+            <label for="student_bday">Date of Birth:</label>
+            <input type="date" id="student_bday" name="bday" required>
+        </div>
+        <div>
+            <label for="student_phone_number">Phone Number:</label>
+            <input type="tel" id="student_phone_number" name="phone_number" required>
+        </div>
+        <div>
+            <label for="student_department">Department</label>
+            <input type="text" id="student_department" name="departement" required>
+        </div>
+        <!-- Add more fields as needed -->
+        <button type="submit">Add professor</button>
+    </form>
+</body>
+</html>

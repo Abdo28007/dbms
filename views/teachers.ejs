@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/teachers.css">
+    <title>Professors</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <a href="/home">
+            <h1>University Dz</h1>
+        </a>
+        </div>
+        <div class="options">
+            <ul>
+                <li><a href="/home/students"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
+                <li class="active"><a href="/home/professors"><img src="/images/teacher2.png" alt="">&nbsp;<span>Teachers</span></a></li>
+                <li ><a href="/home/courses"><img src="/images/dashboard (2).png" alt="">&nbsp;<span>Courses</span></a></li>
+                <li><a href="/home/departements"><img src="/images/school.png" alt="">&nbsp;<span>Departments</span></a></li>
+                <li><a href="/home/groupes"><img src="/images/school.png" alt="">&nbsp;<span>Groupes</span></a></li>
+            </ul>
+        </div>
+     
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="user">
+                    <a href="/home/professors/create" class="btn1">Add New</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            
+            <div class="content-2">
+                <div class="Students">
+                    <div class="title">
+                        <h2>Teachers</h2>
+                    </div>
+                    <% if (professors && professors.length > 0) { %>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>email</th>
+
+                            <th>profile</th>
+                            <th>delete</th>
+                        </tr>
+                        <tr>
+                            <% professors.forEach(professor => { %>
+                        
+                        </tr>
+                        <tr>
+                            <td><%= professor.professor_name %></td>
+                            <td><%= professor.professor_email %></td>
+                            <td><a href="/home/professors/<%= professor.id %>/profile" class="btn">View profile</a></td>
+                            <td><a href="/home/professors/<%= professor.id %>/delete" class="btn">delete profile</a></td>
+                        </tr>  
+                        <% }); %>
+
+                    </table>
+                    <% } else { %>
+                        <p>No professor found.</p>
+                    <% } %>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

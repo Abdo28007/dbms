@@ -1,0 +1,40 @@
+<!-- add_student.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add_groupe.css">
+
+    <title>Add New Departement</title>
+    <!-- Add your CSS stylesheets here -->
+</head>
+<body>
+    <div class="brand-name">
+        <a href="/home">
+        <h1>University Dz</h1>
+    </a>
+    </div>
+    <h1>Add New groupe</h1>
+    <form action="/home/groupes/create" method="POST">
+        <div>
+            <label for="groupe_name">groupe Name:</label>
+            <input type="text" id="groupe_name" name="groupe_name" required>
+        </div>
+        <div>
+            <label for="section">section:</label>
+            <input type="text" id="section" name="section" required>
+        </div>
+        <div>
+            <label for="departement">departement:</label>
+            <input type="text" id="departement" name="departement" required>
+        </div>
+
+ 
+
+        <!-- Add more fields as needed -->
+        <button type="submit">Add Groupe</button>
+    </form>
+</body>
+</html>

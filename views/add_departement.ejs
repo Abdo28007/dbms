@@ -1,0 +1,36 @@
+<!-- add_student.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add_departement.css">
+
+    <title>Add New Departement</title>
+    <!-- Add your CSS stylesheets here -->
+</head>
+<body>
+    <div class="brand-name">
+        <a href="/home">
+        <h1>University Dz</h1>
+    </a>
+    </div>
+    <h1>Add New departement</h1>
+    <form action="/home/departements/create" method="POST">
+        <div>
+            <label for="departement_name">departement Name:</label>
+            <input type="text" id="departement_name" name="departement_name" required>
+        </div>
+        <div>
+            <label for="chef_departement_email">chef_departement_email:</label>
+            <input type="email" id="chef_departement_email" name="chef_departement_email" required>
+        </div>
+
+ 
+
+        <!-- Add more fields as needed -->
+        <button type="submit">Add Departement</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- add_student.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New course</title>
+    <link rel="stylesheet" href="/css/add_course.css">
+
+    <!-- Add your CSS stylesheets here -->
+</head>
+<body>
+    <div class="brand-name">
+        <a href="/home">
+        <h1>University Dz</h1>
+    </a>
+    </div>
+    <h1>Add New course</h1>
+    <form action="/home/courses/create" method="POST">
+        <div>
+            <label for="course_name">Course Name:</label>
+            <input type="text" id="course_name" name="course_name" required>
+        </div>
+        <div>
+            <label for="course_credits">course_credits:</label>
+            <input type="text" id="course_credits" name="course_credits" required>
+        </div>
+        <div>
+            <label for="studying_year">studying_year:</label>
+            <input type="text" id="studying_year" name="studying_year" required>
+        </div>
+        <div>
+            <label for="semestre">Semestre:</label>
+            <input type="text" id="semestre" name="semestre" required>
+        </div>
+ 
+
+        <!-- Add more fields as needed -->
+        <button type="submit">Add course</button>
+    </form>
+</body>
+</html>

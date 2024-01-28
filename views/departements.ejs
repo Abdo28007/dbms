@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/departments.css">
+    <title>Departments</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <a href="/home">
+            <h1>University Dz</h1>
+        </a>
+        </div>
+        <div class="options">
+            
+            
+            <ul>
+                <li><a href="/home/students"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
+                <li><a href="/home/professors"><img src="/images/teacher2.png" alt="">&nbsp;<span>Teachers</span></a></li>
+                <li ><a href="/home/courses"><img src="/images/dashboard (2).png" alt="">&nbsp;<span>Courses</span></a></li>
+                <li class="active"><a href="/home/departements"><img src="/images/school.png" alt="">&nbsp;<span>Departments</span></a></li>
+                <li><a href="/home/groupes"><img src="/images/school.png" alt="">&nbsp;<span>Groupes</span></a></li>
+            </ul>
+            
+            
+
+        </div>
+     
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+
+                <div class="user">
+                    <a href="/home/departements/create" class="btn1">Add New</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            
+            <div class="content-2">
+                <div class="departements">
+                    <div class="title">
+                        <h2>departments</h2>
+                    </div>
+                    <% if (departements && departements.length > 0) { %>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Name of chef-department</th>
+                            <th>Email of chef-department</th>
+                            <th>Delete</th>
+                            
+                        </tr>
+                        <% departements.forEach(departement => { %>
+                        <tr>
+                            
+                            <td><%= departement.departement_name %></td>
+                            <td><%= departement.name_chef_department %></td>
+                            <td><%= departement.email_chef_departement %></td>
+                            <td><a href="/home/departments/<%= departement.departement_id %>/delete" class="btn">Delete departement</a></td>
+                        </tr>
+                        <% }); %>
+                    </table>
+                    <% } else { %>
+                        <p>No departments found.</p>
+                    <% } %>
+                </div>
+                
+                <!-- <div class="new-students">
+                    <div class="title">
+                        <h2>New Students</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>option</th>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+
+                    </table>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

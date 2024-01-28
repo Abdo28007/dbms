@@ -1,0 +1,27 @@
+adminstration :
+	add student account with email and password and other info    				#done
+	update student account - {password , email}       							#done
+	delete student account          											#done
+	add professor account with email and password and other info     			#done
+	update and delete profesor account       									#done
+	add course with info      													#done
+	update course info      													#done
+	delete course       														#done
+	add new departement        													#done
+	update departement chef     												#done
+	delete departement       													#done
+	add another adminstator     												#done
+	delete another adminstator     												#done
+	get list of all students       												#done
+	get list of all professors     												#done
+	get list of all courses         											#done
+
+
+
+
+
+all users :                                                                     #done
+	recherche                               									  #done
+	get profile info                                                  ............#done 0%
+	update profile password                                           ............#done 0%
+	authentification                                                  ............#done 
