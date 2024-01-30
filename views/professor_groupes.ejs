@@ -18,7 +18,7 @@
         </div>
         <div class="options">
             <ul>
-                <li ><a href="/home/students"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
+                <li ><a href="/home/professors"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
                 <li><a href="/home/professors"><img src="/images/teacher2.png" alt="">&nbsp;<span>Teachers</span></a></li>
                 <li ><a href="/home/courses"><img src="/images/dashboard (2).png" alt="">&nbsp;<span>Courses</span></a></li>
                 <li><a href="/home/departements"><img src="/images/school.png" alt="">&nbsp;<span>Departments</span></a></li>
@@ -29,19 +29,20 @@
         </div>
      
     </div>
+    <div class="text-center text-danger mb-3">
+        <% if (message) { %>
+          <p><%= message %></p>
+        <% } %>
+      </div>
     <div class="container">
-        <div class="header">
-            <div class="nav">
-            <form action="/home/search" method="POST">
-                <div class="search">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="/images/search.png" alt=""></button>
-                </div>
-            </form>
-            </div>
-        </div>
         <div class="content">
-            
+            <div class="nav">
+
+                <div class="user">
+                    <a href="/home/professors/<%= professor_id %>/add_groupe" class="btn1">Add New</a>
+
+                </div>
+            </div>
             <div class="content-2">
                 <div class="Students">
                     <div class="title">

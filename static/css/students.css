@@ -1,283 +1,122 @@
+/* Reset default browser styles */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    min-height: 100vh;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-h1
- {
-    color: white;
-}
-
-h3 {
-    color: white;
-}
-
-.btn {
-    background: #142d4c; 
-
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-}
-.btn1{
-    background: #142d4c; 
-
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    margin-right: 10px;
-}
-.btn:hover {
-    color:  #142d4c;
-    background: white;
-    padding: 3px 8px;
-    /* border: 2px solid #f05462; */
-}
-
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 15px 10px;
-    border-bottom: 2px solid  #142d4c;
-}
-
-table {
-    padding: 10px;
-}
-
-th,
-td {
-    text-align: left;
-    padding: 8px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
 }
 
 .side-menu {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
     position: fixed;
-    background: #142d4c; 
-    width: 20vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.content-2{
-    position: relative;
-    left: -300px;
-    top: 80px;
-    background-color: #999;
-    width: 80%;
-    margin-left: 320px;
-    height: 300px;
-    
-}
-.title{
-    color: white !important;
-}
-.side-menu .brand-name {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.side-menu li {
-    font-size: 24px;
-    padding: 10px 40px;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-
-}
-
-.side-menu li:hover {
-    background: rgb(158, 156, 156);
-    color: #142d4c;
-    border-radius: 10px;
-}
-.students{
-    background-color: rgb(158, 156, 156);
-    border-radius: 10px;
-    
-}
-
-
-.container {
-    position: absolute;
-    right: 0;
-    width: 80vw;
-    height: 100vh;
-    background: #f1f1f1;
-}
-
-.container .header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80vw;
-    height: 10vh;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.container .header .nav {
-    width: 90%;
-    display: flex;
-    align-items: center;
-}
-
-.container .header .nav .search {
-    flex: 3;
-    display: flex;
-    justify-content: center;
-}
-
-.container .header .nav .search input[type=text] {
-    border: none;
-    background: #f1f1f1;
-    padding: 10px;
-    width: 50%;
-}
-
-.container .header .nav .search button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container .header .nav .search button img {
-    width: 30px;
-    height: 30px;
-}
-
-.container .header .nav .user {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container .header .nav .user img {
-    width: 40px;
-    height: 40px;
-}
-.options{
-    position: relative;
-    margin-top: 80px;
-}
-
-.container .header .nav .user .img-case {
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-
-.container .header .nav .user .img-case img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
 }
 
-.container .content {
-    position: relative;
-    margin-top: 10vh;
-    min-height: 90vh;
-    background: #f1f1f1;
+.brand-name {
+    padding: 20px;
+    text-align: center;
 }
 
-.container .content .cards {
-    padding: 20px 15px;
+.brand-name h1 {
+    margin: 0;
+    color: #fff;
+}
+
+.options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #666;
+}
+
+.options ul li.active {
+    background-color: #666;
+}
+
+.options ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.content-2 {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
-.container .content .cards .card {
-    width: 250px;
-    height: 150px;
-    background: white;
-    margin: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.Students {
+    width: 100%;
 }
 
-.container .content .content-2 {
-    min-height: 45vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+.Students .title {
+    margin-bottom: 20px;
 }
 
-
-
-
-
-
-@media screen and (max-width: 1050px) {
-    .side-menu li {
-        font-size: 18px;
-    }
+.Students .title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
 
-@media screen and (max-width: 940px) {
-    .side-menu li span {
-        display: none;
-    }
-    .side-menu {
-        align-items: center;
-    }
-    .side-menu li img {
-        width: 40px;
-        height: 40px;
-    }
-    .side-menu li:hover {
-        background: #999;
-        padding: 8px 38px;
-        border: 2px solid white;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-@media screen and (max-width:536px) {
-    .brand-name h1 {
-        font-size: 16px;
-    }
-    .container .content .cards {
-        justify-content: center;
-    }
-    .side-menu li img {
-        width: 30px;
-        height: 30px;
-    }
-    .container .content .content-2 .recent-payments table th:nth-child(2),
-    .container .content .content-2 .recent-payments table td:nth-child(2) {
-        display: none;
-    }
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn1 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block; /* Ensures the button is displayed as an inline block */
+}
+.btn {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #cc0000;
 }

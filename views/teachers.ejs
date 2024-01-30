@@ -35,6 +35,11 @@
                 </div>
             </div>
         </div>
+        <div class="text-center text-danger mb-3">
+            <% if (message) { %>
+              <p><%= message %></p>
+            <% } %>
+          </div>
         <div class="content">
             
             <div class="content-2">
@@ -47,8 +52,8 @@
                         <tr>
                             <th>Name</th>
                             <th>email</th>
-
                             <th>profile</th>
+                            <th>update</th>
                             <th>delete</th>
                         </tr>
                         <tr>
@@ -59,6 +64,7 @@
                             <td><%= professor.professor_name %></td>
                             <td><%= professor.professor_email %></td>
                             <td><a href="/home/professors/<%= professor.id %>/profile" class="btn">View profile</a></td>
+                            <td><a href="/home/professors/<%= professor.id %>/update" class="btn">update profile</a></td>
                             <td><a href="/home/professors/<%= professor.id %>/delete" class="btn">delete profile</a></td>
                         </tr>  
                         <% }); %>

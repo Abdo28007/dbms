@@ -10,35 +10,41 @@
     <title>Home</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <a class="logo" href="/home">UNIVERSITY DZ</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="logo" href="/home">UNIVERSITY DZ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home/students">STUDENTS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home/professors">PROFESSORS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home/courses">COURSES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/home/departements">DEPARTMENTS</a>
-              </li>
-
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home/students">STUDENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home/professors">PROFESSORS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home/courses">COURSES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"  href="/home/departements">DEPARTMENTS</a>
+                </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" name=" search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+            <div class="d-flex">
+                <!-- Profile button -->
+                <a href="/home/administrators/profile" class="btn btn-outline-primary me-2">Profile</a>
+                <!-- Logout button -->
+                <a href="/home/logout" class="btn btn-outline-danger">Logout</a>
+            </div>
+            <form class="d-flex" action="/home/search" method="POST">
+                <input class="form-control me-2" type="search" placeholder="Search" name="value" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-          </div>
         </div>
-      </nav>
+    </div>
+</nav>
+
       <section class="continer zz">
       <div class="row text-center align-items-center w-100">
         <div class="col-lg-6 title">
@@ -74,6 +80,8 @@
           <li class="menu__item"><a class="menu__link" href="/about">About</a></li>
           <li class="menu__item"><a class="menu__link" href="/service">Services</a></li>
           <li class="menu__item"><a class="menu__link" href="/contact">Contact</a></li>
+          <!-- Logout button -->
+          <li class="menu__item"><a class="menu__link" href="/logout">Logout</a></li>
         </ul>
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

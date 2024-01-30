@@ -1,15 +1,74 @@
-.divider:after,
-.divider:before {
-content: "";
-flex: 1;
-height: 1px;
-background: #eee;
+/* login.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.h-custom {
-height: calc(100% - 73px);
+
+/* Container styles */
+.container-fluid {
+    height: 100vh;
 }
-@media (max-width: 450px) {
-.h-custom {
-height: 100%;
+
+/* Image styles */
+.img-fluid {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
+
+/* Form styles */
+.form-outline {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-outline input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    background-color: transparent;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-outline input:focus {
+    border-color: #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button styles */
+.btn-primary {
+    padding: 0.5rem 2.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.footer a:hover {
+    color: #f0f0f0;
 }

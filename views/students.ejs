@@ -41,6 +41,11 @@
                 </div>
             </div>
         </div>
+        <div class="text-center text-danger mb-3">
+            <% if (message) { %>
+              <p><%= message %></p>
+            <% } %>
+          </div>
         <div class="content">
             
             <div class="content-2">
@@ -57,6 +62,7 @@
                             <th>departement</th>
                             <th>email</th>
                             <th>Profile</th>
+                            <th>update</th>
                             <th>delete</th>
                             
                         </tr>
@@ -68,6 +74,7 @@
                                 <td><%= student.student_department %></td>
                                 <td><%= student.student_email %></td>
                                 <td><a href="/home/students/<%= student.id %>/profile" class="btn">View profile</a></td>
+                                <td><a href="/home/students/<%= student.id %>/update" class="btn">update profile</a></td>
                                 <td><a href="/home/students/<%= student.id %>/delete" class="btn">Delete profile</a></td>
 
                             </tr>

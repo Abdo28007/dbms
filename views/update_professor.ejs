@@ -1,0 +1,54 @@
+<!-- add_professor.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add_student.css">
+
+    <title>update professor</title>
+    <!-- Add your CSS stylesheets here -->
+</head>
+<body>
+    <div class="text-center text-danger mb-3">
+        <% if (message) { %>
+          <p><%= message %></p>
+        <% } %>
+      </div>
+    <form action="/home/professors/<%= data.id %>/update" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div>
+            <label for="professor_name">Name:</label>
+            <input type="text" id="professor_name" name="professor_name" required value="<%= data.professor_name %>">
+        </div>
+        <div>
+            <label for="professor_email">Email:</label>
+            <input type="email" id="professor_email" name="professor_email" required value="<%= data.professor_email %>" >
+        </div>
+        <div>
+            <label for="professor_address">Address:</label>
+            <input type="text" id="professor_address" name="professor_adress" required value="<%= data.professor_adress %>">
+        </div>
+        <div>
+            <label for="professor_wilaya">Wilaya:</label>
+            <input type="text" id="professor_wilaya" name="professor_wilaya" required value="<%= data.professor_wilaya %>">
+        </div>
+        <div>
+            <label for="professor_bday">Date of Birth:</label>
+            <input type="date" id="professor_bday" name="professor_bday" required value="<%= data.professor_bday %>">
+        </div>
+        <div>
+            <label for="professor_phone_number">Phone Number:</label>
+            <input type="tel" id="professor_phone_number" name="professor_phone_number" required value="<%= data.professor_phone_number %>">
+        </div>
+        <div>
+            <label for="professor_department">Department</label>
+            <input type="text" id="professor_department" name="departement" required value="<%= professor_departement %>">
+        </div>
+        <!-- Add more fields as needed -->
+        <button type="submit">Update professor</button>
+    </form>
+
+</body>
+</html>

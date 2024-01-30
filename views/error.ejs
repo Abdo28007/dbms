@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        .error-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #f00;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Error</h1>
+        <% if (error) { %>
+            <p><%= error %></p>
+        <% } else { %>
+            <p>Oops! Something went wrong.</p>
+        <% } %>
+        <p>We're sorry, but an unexpected error occurred on the server.</p>
+        <p>Please try again later or contact support if the problem persists.</p>
+    </div>
+</body>
+</html>

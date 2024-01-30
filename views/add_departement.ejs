@@ -17,6 +17,11 @@
     </a>
     </div>
     <h1>Add New departement</h1>
+    <div class="text-center text-danger mb-3">
+        <% if (message) { %>
+          <p><%= message %></p>
+        <% } %>
+      </div>
     <form action="/home/departements/create" method="POST">
         <div>
             <label for="departement_name">departement Name:</label>

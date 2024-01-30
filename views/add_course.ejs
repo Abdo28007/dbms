@@ -17,6 +17,11 @@
     </a>
     </div>
     <h1>Add New course</h1>
+    <div class="text-center text-danger mb-3">
+        <% if (message) { %>
+          <p><%= message %></p>
+        <% } %>
+      </div>
     <form action="/home/courses/create" method="POST">
         <div>
             <label for="course_name">Course Name:</label>

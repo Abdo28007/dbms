@@ -1,308 +1,74 @@
-* {
+/* profile.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
 }
 
-body {
-    min-height: 100vh;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-h1
- {
-    color: white;
-}
-
-h3 {
-    color: white;
-}
-
-.btn {
-    background: #142d4c; 
-
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-}
-.btn1{
-    background: #142d4c; 
-
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    margin-right: 10px;
-}
-.btn:hover {
-    color:  #142d4c;
-    background: white;
-    padding: 3px 8px;
-    /* border: 2px solid #f05462; */
-}
-
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 15px 10px;
-    border-bottom: 2px solid  #142d4c;
-}
-.active{
-    background-color: #999;
-    border-radius: 10px;
-}
-
-table {
-    padding: 10px;
-}
-
-th,
-td {
-    text-align: left;
-    padding: 8px;
-}
-
+/* Side menu styles */
 .side-menu {
-    position: fixed;
-    background: #142d4c; 
-    width: 20vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.content-2{
-    position: relative;
-    left: -300px;
-    top: 80px;
-    background-color: #999;
-    width: 80%;
-    margin-left: 320px;
-    /* height: 700px; */
-    
-}
-.title{
-    color: white !important;
-}
-.side-menu .brand-name {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.side-menu li {
-    font-size: 24px;
-    padding: 10px 40px;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-
-}
-
-.side-menu li:hover {
-    background: rgb(158, 156, 156);
-    color: #142d4c;
-    border-radius: 10px;
-}
-
-
-
-.container {
-    position: absolute;
-    right: 0;
-    width: 80vw;
+    background-color: #343a40;
+    color: #fff;
     height: 100vh;
-    background: #f1f1f1;
-}
-
-.container .header {
+    width: 200px;
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 80vw;
-    height: 10vh;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.container .header .nav {
-    width: 90%;
-    display: flex;
-    align-items: center;
-}
-
-.container .header .nav .search {
-    flex: 3;
-    display: flex;
-    justify-content: center;
-}
-
-.container .header .nav .search input[type=text] {
-    border: none;
-    background: #f1f1f1;
-    padding: 10px;
-    width: 50%;
-}
-
-.container .header .nav .search button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container .header .nav .search button img {
-    width: 30px;
-    height: 30px;
-}
-
-.container .header .nav .user {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container .header .nav .user img {
-    width: 40px;
-    height: 40px;
-}
-.options{
-    position: relative;
-    margin-top: 80px;
-}
-
-.container .header .nav .user .img-case {
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-
-.container .header .nav .user .img-case img {
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
 }
 
-.container .content {
-    position: relative;
-    margin-top: 10vh;
-    min-height: 90vh;
-    background: #f1f1f1;
+.side-menu ul {
+    list-style: none;
+    padding: 0;
 }
 
-.container .content .cards {
-    padding: 20px 15px;
+.side-menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #4e5256;
+}
+
+.side-menu ul li a {
+    color: #fff;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-#profile{
-    border-radius: 20px;
-    object-fit: cover;
 }
 
-.container .content .cards .card {
-    width: 250px;
-    height: 150px;
-    background: white;
-    margin: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.side-menu ul li a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
-.container .content .content-2 {
-    min-height: 45vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+.side-menu ul li.active {
+    background-color: #495057;
 }
 
-
-
-
-
-
-@media screen and (max-width: 1050px) {
-    .side-menu li {
-        font-size: 18px;
-    }
+/* Container styles */
+.container {
+    margin-left: 200px;
+    padding: 20px;
 }
 
-@media screen and (max-width: 940px) {
-    .side-menu li span {
-        display: none;
-    }
-    .side-menu {
-        align-items: center;
-    }
-    .side-menu li img {
-        width: 40px;
-        height: 40px;
-    }
-    .side-menu li:hover {
-        background: #999;
-        padding: 8px 38px;
-        border: 2px solid white;
-    }
-}
-.container1{
-    background-color: #142d4c  ;
-    position: relative;
-    margin-top: 180px;
-    width: 80%;
-    color: white;
-    margin-left: 120px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    height: 550px;
-    border-radius: 20px;
-    
-}
-.fields{
-    margin-left: 270px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
-    margin-bottom: 50px;
-}
-.margin{
-    margin-top: 35px;
+/* Content styles */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width:536px) {
-    .brand-name h1 {
-        font-size: 16px;
-    }
-    .container .content .cards {
-        justify-content: center;
-    }
-    .side-menu li img {
-        width: 30px;
-        height: 30px;
-    }
-    .container .content .content-2 .recent-payments table th:nth-child(2),
-    .container .content .content-2 .recent-payments table td:nth-child(2) {
-        display: none;
-    }
+.container1 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.margin {
+    margin-bottom: 10px;
+}
+
+.margin span {
+    font-weight: bold;
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/departments.css">
-    <title>Student list</title>
+    <title>professors list</title>
 </head>
 
 <body>
@@ -20,8 +20,8 @@
             
             
             <ul>
-                <li class="active"><a href="/home/students"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
-                <li><a href="/home/professors"><img src="/images/teacher2.png" alt="">&nbsp;<span>Teachers</span></a></li>
+                <li ><a href="/home/students"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
+                <li class="active"><a href="/home/professors"><img src="/images/teacher2.png" alt="">&nbsp;<span>Teachers</span></a></li>
                 <li ><a href="/home/courses"><img src="/images/dashboard (2).png" alt="">&nbsp;<span>Courses</span></a></li>
                 <li><a href="/home/departements"><img src="/images/school.png" alt="">&nbsp;<span>Departments</span></a></li>
                 <li ><a href="/home/groupes"><img src="/images/school.png" alt="">&nbsp;<span>Groupes</span></a></li>
@@ -30,13 +30,12 @@
             
 
         </div>
-     
+        <div class="text-center text-danger mb-3">
+            <% if (message) { %>
+              <p><%= message %></p>
+            <% } %>
+          </div>
     </div>
-    <div class="text-center text-danger mb-3">
-        <% if (message) { %>
-          <p><%= message %></p>
-        <% } %>
-      </div>
     <div class="container">
         <div class="header">
 
@@ -45,29 +44,25 @@
             <div class="content-2">
                 <div class="departements">
                     <div class="title">
-                        <h2>Students</h2>
+                        <h2>professors</h2>
                     </div>
-                    <% if (students && students.length > 0) { %>
+                    <% if (professors && professors.length > 0) { %>
                     <table>
                         <tr>
-                            <th>Student Name</th>
+                            <th>professor Name</th>
                             <th>Email Address</th>
-
                             <th>profile</th>
-
-
-
                         </tr>
-                        <% students.forEach(student => { %>
+                        <% professors.forEach(professor => { %>
                         <tr>
-                            <td><%= student.student_name %></td>
-                            <td><%= student.student_email %></td>
-                            <td><a href="/home/students/<%= student.id %>/profile">View</a></td>
+                            <td><%= professor.professor_name %></td>
+                            <td><%= professor.professor_email %></td>
+                            <td><a href="/home/professors/<%= professor.id %>/profile">View</a></td>
                         </tr>
                         <% }); %>
                     </table>
                     <% } else { %>
-                        <p>No student found.</p>
+                        <p>No professor found.</p>
                     <% } %>
                 </div>
             </div>

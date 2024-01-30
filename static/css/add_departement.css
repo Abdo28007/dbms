@@ -1,49 +1,49 @@
-/* Reset default browser styles */
-body,
-ul {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
 }
 
-/* Basic styling */
 .brand-name {
     background-color: #333;
-    color: #fff;
     padding: 20px;
     text-align: center;
 }
 
-.brand-name a {
-    text-decoration: none;
-    color: inherit;
+.brand-name h1 {
+    margin: 0;
+    color: #fff;
 }
 
 h1 {
     text-align: center;
     margin-top: 30px;
+    color: #333;
 }
 
 form {
-    max-width: 400px;
+    width: 50%;
     margin: 0 auto;
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form div {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-form label {
-    display: block;
+label {
     font-weight: bold;
+    display: block;
 }
 
-form input[type="text"],
-form input[type="email"] {
+input[type="text"],
+input[type="email"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -57,7 +57,6 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
 }
 
 button[type="submit"]:hover {

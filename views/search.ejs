@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/search.css">
+    <title>Search Results</title>
+</head>
+<body>
+    <div class="side-menu">
+        <!-- Side menu content -->
+    </div>
+    <div class="container">
+        <div class="header">
+            <!-- Header content -->
+        </div>
+        <div class="content">   
+            <div class="container1">
+                <br>
+                <% if (result && result.length > 0) { %>
+                    <% result.forEach(item => { %>
+                        <% if (result_type === 'student') { %>
+                            <div class="margin">Name: <span><%= item.student_name %></span></div>
+                            <div class="margin">Email: <span><%= item.student_email %></span></div>
+                            <a href="/home/students/<%= item.id %>/profile" class="btn btn-primary">View Details</a>
+                        <% } else if (result_type === 'professor') { %>
+                            <div class="margin">Name: <span><%= item.professor_name %></span></div>
+                            <div class="margin">Email: <span><%= item.professor_email %></span></div>
+                            <a href="/home/professors/<%= item.id %>/profile" class="btn btn-primary">View Details</a>
+
+                        <% } else if (result_type === 'course') { %>
+                            <div class="margin">Name: <span><%= item.course_name %></span></div>
+                            <div class="margin">Coefficient: <span><%= item.course_coefficient %></span></div>
+                            <div class="margin">Semestre: <span><%= item.course_semestre %></span></div>
+                        <% } else if (result_type === 'department') { %>
+                            <div class="margin">Name: <span><%= item.departement_name %></span></div>
+                            <div class="margin">Chef Department: <span><%= item.name_chef_department %></span></div>
+                            <div class="margin">Email Chef Department: <span><%= item.email_chef_department %></span></div>
+                        <% } else if (result_type === 'group') { %>
+                            <div class="margin">Name: <span><%= item.groupe_name %></span></div>
+                            <div class="margin">Section: <span><%= item.groupe_section %></span></div>
+                        <% } %>
+                    <% }); %>
+                <% } else { %>
+                    <p>No results found.</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

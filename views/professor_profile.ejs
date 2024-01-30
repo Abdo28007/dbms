@@ -19,10 +19,10 @@
         <div class="options">
 
             <ul>
-                <li class="active"><a href="/home/students"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
-                <li><a href="/home/professors"><img src="/images/teacher2.png" alt="">&nbsp;<span>Teachers</span></a></li>
+                <li ><a href="/home/students"><img src="/images/reading-book (1).png" alt="">&nbsp;<span>Students</span></a></li>
+                <li class="active"> <a href="/home/professors"><img src="/images/teacher2.png" alt="">&nbsp;<span>Teachers</span></a></li>
                 <li ><a href="/home/courses"><img src="/images/dashboard (2).png" alt="">&nbsp;<span>Courses</span></a></li>
-                <li><a href="/home/departments"><img src="/images/school.png" alt="">&nbsp;<span>Departments</span></a></li>
+                <li><a href="/home/departements"><img src="/images/school.png" alt="">&nbsp;<span>Departments</span></a></li>
                 <li><a href="/home/groupes"><img src="/images/school.png" alt="">&nbsp;<span>Groupes</span></a></li>
             </ul>
 
@@ -31,16 +31,14 @@
         </div>
 
     </div>
+    <div class="text-center text-danger mb-3">
+        <% if (message) { %>
+          <p><%= message %></p>
+        <% } %>
+      </div>
     <div class="container">
         <div class="header">
-            <div class="nav">
-                <div class="user">
-                    <img src="/images/notifications.png" alt="">
-                    <div class="img-case">
-                        <img src="/images/user.png" alt="">
-                    </div>
-                </div>
-            </div>
+
         </div>
         <div class="content">
             <div class="container1">

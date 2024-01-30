@@ -41,6 +41,11 @@
                 </div>
             </div>
         </div>
+        <div class="text-center text-danger mb-3">
+            <% if (message) { %>
+              <p><%= message %></p>
+            <% } %>
+          </div>
         <div class="content">
             
             <div class="content-2">
@@ -54,6 +59,8 @@
                             <th>Name</th>
                             <th>Name of chef-department</th>
                             <th>Email of chef-department</th>
+                            <th>list students</th>
+                            <th>list professors</th>
                             <th>Delete</th>
                             
                         </tr>
@@ -63,6 +70,8 @@
                             <td><%= departement.departement_name %></td>
                             <td><%= departement.name_chef_department %></td>
                             <td><%= departement.email_chef_departement %></td>
+                            <td><a href="/home/departments/<%= departement.departement_id %>/students" class="btn">list students</a></td>
+                            <td><a href="/home/departments/<%= departement.departement_id %>/professors" class="btn">list professors</a></td>
                             <td><a href="/home/departments/<%= departement.departement_id %>/delete" class="btn">Delete departement</a></td>
                         </tr>
                         <% }); %>
@@ -72,40 +81,10 @@
                     <% } %>
                 </div>
                 
-                <!-- <div class="new-students">
-                    <div class="title">
-                        <h2>New Students</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Profile</th>
-                            <th>Name</th>
-                            <th>option</th>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
+           
 
                     </table>
-                </div> -->
+                </div> 
             </div>
         </div>
     </div>

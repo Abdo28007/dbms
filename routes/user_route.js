@@ -10,9 +10,9 @@ const {
 
 
 
-router.post('/login',UserLoginValidation,validationResult,log_in );
-router.post('/logout',log_out );
-router.get("/home/search/:filter/:key",search)
+router.post('/login',log_in );
+router.get('/home/logout',log_out );
+router.post("/home/search",search)
 
 
 

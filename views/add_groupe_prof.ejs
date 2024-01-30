@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/add_groupe.css">
 
-    <title>Add New groupe</title>
+    <title>Add New groupe for prof</title>
     <!-- Add your CSS stylesheets here -->
 </head>
 <body>
@@ -16,29 +16,18 @@
             <h1>University Dz</h1>
         </a>
     </div>
-    <h1>Add New groupe</h1>
+    <h1>Add groupe</h1>
     
     <div class="text-center text-danger mb-3">
         <% if (message) { %>
           <p><%= message %></p>
         <% } %>
       </div>
-    <form action="/home/groupes/create" method="POST">
+    <form action="/home/professors/<%= id %>/add_groupe " method="POST">
         <div>
             <label for="groupe_name">groupe Name:</label>
             <input type="text" id="groupe_name" name="groupe_name" required>
         </div>
-        <div>
-            <label for="section">section:</label>
-            <input type="text" id="section" name="section" required>
-        </div>
-        <div>
-            <label for="departement">departement:</label>
-            <input type="text" id="departement" name="departement" required>
-        </div>
-
- 
-
         <!-- Add more fields as needed -->
         <button type="submit">Add Groupe</button>
     </form>
