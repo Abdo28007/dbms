@@ -191,7 +191,39 @@ app.get("/home/groupes/create", IsAuth, (req, res, next) => {
     res.render("add_groupe" , {message:""} )
 })
 
-
+app.get("/home/professors/:prof_id/groupes/:groupe_id/delete",IsAuth,async(req,res,next) => {
+    try {
+        const {prof_id,groupe_id} = req.params
+        const [professor] = await db.query("select * from professors where id = ? ",[prof_id])
+        if (professor.length === 0) {
+            const [professors]= await db.query('select * from professors where 1')        
+            return res.render("professors",{professors, message :"professor account doesnt exicte"})
+        }
+        const [departement] =await db.query("select * from departments where departement_id = ?",[ professor[0].professor_departement])
+        const [groupe] = await db.query("select * from groupes where groupe_id = ? ", [groupe_id])
+        if (groupe.length === 0) {
+            return res.render("professor_profile",{
+                message : "groupe doesnt exicte",
+                professor: professor[0],
+                departement:departement[0].departement_name 
+            })
+        }
+        const[groupe_prof] = await db.query("select * from prof_groups where groupe_id =? and professor_id = ?",[groupe_id,prof_id])
+        if (groupe_prof.length === 0) {
+            return res.render("professor_profile",{
+                message : "groupe doesnt exicte",
+                professor: professor[0],
+                departement:departement[0].departement_name 
+            })
+        }
+        await db.query("delete from prof_groups where groupe_id = ? and professor_id = ?",[groupe_id,prof_id])
+        return res.redirect(`/home/professors/${prof_id}/profile`)
+    } catch (error) {
+        console.log(error);
+        res.status(500).render("bdd", { message :error.message })
+        
+    }
+})
 app.use(UserRouter)
 app.use(adminRouter)
 app.use(noFound)

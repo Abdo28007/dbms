@@ -258,11 +258,12 @@ try {
 const get_professor_groupes = async (req, res, next) => {
 try {
     const { id } = req.params
-    const [groupes] = await db.query(`select g.groupe_name 
+    const [groupes] = await db.query(`select *
                                         from groupes as g
                                         join prof_groups as pg
                                         on g.groupe_id = pg.groupe_id
                                         WHERE pg.professor_id = ?`, [id])
+    console.log(groupes);                                   
     res.status(200).render("professor_groupes", { groupes ,professor_id : id,message:""})
 } catch (error) {
     console.log(error);

@@ -1,37 +1,83 @@
-/* login.css */
+/* Styles for the login page */
 
-/* Global styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    background-color: #f8f9fa;
+}
+
+.container-fluid {
     padding: 0;
 }
 
-/* Container styles */
-.container-fluid {
+.vh-100 {
     height: 100vh;
 }
 
-/* Image styles */
+.h-custom {
+    height: 100%;
+}
+
+.text-danger {
+    color: red;
+}
+
 .img-fluid {
-    width: 100%;
     max-width: 100%;
     height: auto;
 }
 
-/* Form styles */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mr-3 {
+    margin-right: 1rem;
+}
+
+.pt-2 {
+    padding-top: 0.5rem;
+}
+
+.pb-4 {
+    padding-bottom: 1.5rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.px-4 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-lg-start {
+    text-align: left;
+}
+
 .form-outline {
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .form-outline input {
     width: 100%;
     padding: 0.5rem;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid #ced4da;
-    background-color: transparent;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -41,34 +87,13 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
 }
 
-/* Button styles */
 .btn-primary {
-    padding: 0.5rem 2.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
     background-color: #007bff;
-    border: none;
-    transition: background-color 0.15s ease-in-out;
+    border-color: #007bff;
+    color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Footer styles */
-.footer {
-    background-color: #007bff;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-.footer a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 1rem;
-}
-
-.footer a:hover {
-    color: #f0f0f0;
+    background-color: #0069d9;
+    border-color: #0062cc;
 }

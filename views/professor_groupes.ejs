@@ -52,10 +52,12 @@
                     <table>
                         <tr>
                             <th>Groupe Name</th>
+                            <th>delete</th>
                         </tr>
                         <% groupes.forEach(groupe => { %>
                         <tr>
                             <td><%= groupe.groupe_name %></td>
+                            <td><a href="/home/professors/<%= professor_id %>/groupes/<%= groupe.groupe_id %>/delete" class="btn">delete groupe</a></td>
                         </tr>
                         <% }); %>
                     </table>
